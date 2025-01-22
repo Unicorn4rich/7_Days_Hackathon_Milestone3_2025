@@ -1,0 +1,53 @@
+import { Feat_data } from "../productCard";
+
+
+export const featureProduct_Data: Feat_data[] = [
+    {
+        id: 1,
+        badge: true,
+        badgeText: "New",
+        badgeColor: `bg-green`,
+        src: "/products/product1.png",
+        heading: "Library Stool shoaib",
+        newPrice: 250,
+        oldPrice_h2: false,
+        oldPrice: 350,
+        shopBg: `bg-gray`,
+    },
+    {
+        id: 2,
+        badge: true,
+        badgeText: "sales",
+        badgeColor: `bg-orange`,
+        src: "/products/product2.png",
+        heading: "Library Stool Chair",
+        newPrice: 20,
+        oldPrice_h2: true,
+        oldPrice: 30,
+        shopBg: `bg-gray`,
+    },
+    {
+        id: 3,
+        badge: false,
+        badgeText: "New",
+        badgeColor: "green",
+        src: "/products/product3.png",
+        heading: "Library Stool Chair",
+        newPrice: 20,
+        oldPrice_h2: false,
+        oldPrice: 30,
+        shopBg: `bg-gray`,
+    },
+    {
+        id: 4,
+        badge: false,
+        badgeText: "New",
+        badgeColor: "green",
+        src: "/products/product4.png",
+        heading: "Library Stool Chair",
+        newPrice: 20,
+        oldPrice_h2: false,
+        oldPrice: 30,
+        shopBg: `bg-gray`,
+    },
+]
