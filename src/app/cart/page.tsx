@@ -1,7 +1,7 @@
 import Cart_Route from '@/components/Cart'
 import React, { Suspense } from 'react'
 
-function page() {
+function Cart_Comp() {
   return (
     <>
       
@@ -13,4 +13,4 @@ function page() {
   )
 }
 
-export default page
+export default Cart_Comp

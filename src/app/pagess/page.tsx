@@ -6,7 +6,7 @@ import { MdWatchLater } from "react-icons/md";
 import Image from "next/image"
 import { client } from '@/sanity/lib/client';
 
-async function Page() {
+async function Pages_Route() {
 
     // Adress Sanity Data 
     const Address_Data = await client.fetch("*[_type == 'contactPage'][0].sections[0]{'dddress': dddress,'phone': phone,'workingTime': workingTime,}")
@@ -149,4 +149,4 @@ async function Page() {
   )
 }
 
-export default Page
+export default Pages_Route
