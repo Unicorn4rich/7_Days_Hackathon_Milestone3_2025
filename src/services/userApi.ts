@@ -46,7 +46,7 @@ export async function Sending_UserData_ToSanity(){  // Sanity CMS pe user ka dat
       userImage: user.userImage
    }
 
-   const res = client.createOrReplace(UserObject)  // is function ko id zror chahiye hoti hai data bhejne ke liye => _id:"dae2ac80-dce8-403c-8253-86fa658b7e01",
+   client.createOrReplace(UserObject)  // is function ko id zror chahiye hoti hai data bhejne ke liye => _id:"dae2ac80-dce8-403c-8253-86fa658b7e01",
 
-   return res
+  
 }
