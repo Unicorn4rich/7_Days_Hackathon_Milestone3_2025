@@ -33,7 +33,8 @@ async function Hero() {
         gap-[10px] md:gap-[24px] text-center md:text-start'>
           <p className='text-[14px] leading-[14px] tracking-[12%] text-[#272343]'>{heroSmHeading}</p>
 
-          <div className=' px-[2px] md:px-[0px]
+          <div 
+          className=' px-[2px] md:px-[0px]
           w-[300px] md:w-[600px]'>
           <h1 className='
           text-[25px] md:text-[60px] 

@@ -18,7 +18,7 @@ async function ProductBot() {
     {/* bottom subscribe section */}
     <div className='w-full text-center mt-[40px] md:mt-[173px] px-[5px] md:px-[0px] py-[5px] pb-[30px] md:py-[100px] bg-[#F0F2F3]'>
 
-<h1 className='text-[18px] md:text-[50px] leading-[58px] font-medium '>{SocialInfo_data.socialInfoText}</h1>
+      <h1 className='text-[18px] md:text-[50px] leading-[58px] font-medium '>{SocialInfo_data.socialInfoText}</h1>
 
 
 {/* input and button */}
@@ -41,7 +41,7 @@ async function ProductBot() {
 
 
 {/* pictures div */}
- <div className='flex itmes-center justify-center overflow-x-auto md:overflow-x-visible gap-[10px] md:gap-[24px] mt-[20px] md:mt-[60px]'>
+ <div className='w-full flex flex-wrap md:flex-nowrap items-center justify-center gap-[15px] md:gap-[24px] mt-[20px] md:mt-[60px]'>
 
    <Link href={`/products/id?cardImage=${SocialInfo_data.followProducts.product1}&heading=Brown Wooden Stool&newPrice=99`}>
      <Image src={SocialInfo_data.followProducts.product1} alt="pic" width={186} height={186} className='transform hover:scale-[1.04] transition-transform duration-500 ease-in-out'/>

@@ -11,6 +11,7 @@ import { Button } from './ui/button';
 import Link from "next/link"
 import { IoMdMenu } from "react-icons/io";
 import { client } from '@/sanity/lib/client';
+import { UserButton } from '@clerk/nextjs';
 
 
 
@@ -131,16 +132,21 @@ import { client } from '@/sanity/lib/client';
              </div>
 
           <div className='flex items-center gap-[8px] py-[11px] px-[16px] bg-white rounded-[8px] '>
-            <Link href={"/pagesRoute"}><LuShoppingCart className='hover:cursor-pointer
-            text-[16px] md:text-[22px]'/></Link>
+            <Link href={"/pagesRoute"}>
+            <LuShoppingCart className='hover:cursor-pointer
+            text-[16px] md:text-[22px]'/>
+            </Link>
 
            <Link href={"/pagesRoute"}><p className='
             text-[10px] md:text-[12px] leading-[13px] font-medium hover:cursor-pointer'>Cart</p>
            </Link> 
+
             <Button size={"icon"} className='
             text-[13px]
-            h-[17px] md:h-[20px] 
-            w-[17px] md:w-[20px] rounded-full bg-[#007580]'>2</Button>
+            h-[17px] md:h-[26px] 
+            w-[17px] md:w-[26px] rounded-full bg-[#007580]'>2</Button>
+
+            <UserButton/>
           </div>
           </div>
 
@@ -166,7 +172,6 @@ import { client } from '@/sanity/lib/client';
             {/* <Link href={"/pagesRoute"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Pages</li></Link> */}
             <Link href={"/pagess"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Pages</li></Link>
             <Link href={"/about-us"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>About</li></Link>
-            <Link href={"/dashboard"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Dashboard</li></Link>
 
           </ul>
 
@@ -179,7 +184,6 @@ import { client } from '@/sanity/lib/client';
             {/* <Link href={"/pagesRoute"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Pages</li></Link> */}
             <Link href={"/pagess"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Pages</li></Link>
             <Link href={"/about-us"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>About</li></Link>
-            <Link href={"/dashboard"}><li className='text-[14px] leading-[15px] font-medium hover:text-[#007580] '>Dashboard</li></Link>
           </ul>
           )}
 
@@ -190,7 +194,7 @@ import { client } from '@/sanity/lib/client';
                 <input type='text' placeholder='Search Products' className='
                 w-[100px] md:w-[250px] 
                 text-[9px] md:text-[15px] p-[4] md:p-[7px] pr-[22px] rounded-[5px] border-black border-[1px]'/>
-                <IoSearchOutline size={22} className='w-[14px] md:w-[22px] h-[22px] absolute top-[1px] md:top-[8px] right-[5px]'/>
+                <IoSearchOutline size={22} className='hidden md:block w-[14px] md:w-[22px] h-[22px] absolute top-[1px] md:top-[8px] right-[5px]'/>
              </div>
 
           <div className='flex gap-[8px] items-center'>
@@ -199,7 +203,7 @@ import { client } from '@/sanity/lib/client';
             leading-[15px] text-[#636270]'>Contact:</p>
             <p className='
             text-[11px] md:text-[14px] 
-            leading-[15px] font-medium'>{Receive_Data.contactNumber}</p>
+            leading-[15px] font-medium'>{String(Receive_Data.contactNumber)}</p>
           </div>
         </div>
 

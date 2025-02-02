@@ -20,12 +20,16 @@ import { ProductPage } from './Product-page-Sections/ProductPage'
 import { ContactPage } from './Contact_Page/ContactPage'
 import { productSchema } from './Api-Integration/products'
 import { categorySchema } from './Api-Integration/categories'
+import { userSchema } from './ClerkUserSchema/user'
 
 
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
 
+    // User data from clerk
+    userSchema,
+    
       // Eternal schema for api
       productSchema,
       categorySchema,

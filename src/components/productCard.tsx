@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Card } from './ui/card'
 import Image from "next/image"
@@ -5,7 +7,7 @@ import { Badge } from './ui/badge'
 import { Button } from './ui/button'
 import { LuShoppingCart } from 'react-icons/lu'
 import Link from "next/link"
-
+import { motion } from 'framer-motion'
 
 export  interface Feat_data {
   id: number,
@@ -29,7 +31,12 @@ function ProductCard({data}: {data: Feat_data[]}) {
        {data.map((item: Feat_data, index: number)=> {
         return(
             
-          <Link href={`/products/id?cardImage=${item.src}&heading=${item.heading}&newPrice=${item.newPrice}`} key={index}>  
+          <motion.div 
+          initial={{ opacity: 0, y: 150 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1 }}
+          key={index}>
+          <Link href={`/products/id?cardImage=${item.src}&heading=${item.heading}&newPrice=${item.newPrice}`}> 
           <Card className='
           h-full 
           f-1/2 md:w-full overflow-hidden shadow-none border-none '>
@@ -96,6 +103,7 @@ function ProductCard({data}: {data: Feat_data[]}) {
 
           </Card>
           </Link>
+          </motion.div>
         )
        })}
       

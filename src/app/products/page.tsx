@@ -11,24 +11,6 @@ import { ChevronDown } from 'lucide-react';
 
 async function Product_Page(){
 
-  // for Top Cards sanity data inputs Old...
-
-
-  // const productRoute_data: Product_data[]  = await client.fetch("*[_type == 'productPage'][0].sections[0].card[]{'cardImg': cardImg.asset->url,'cardHeading': cardHeading,'cardNewPrice': cardNewPrice,'cardOldPrice': cardOldPrice,}");
-
-  // const Product_data = productRoute_data.map((item: Product_data, index: number)=> ({ // loop for name changing
-  //   id: index,
-  //   badge: false,
-  //   badgeText: '',
-  //   badgeColor: '',
-  //   src: item.cardImg,
-  //   heading: item.cardHeading,
-  //   newPrice: item.cardNewPrice,
-  //   oldPrice_h2: item.cardOldPrice ? true : false,
-  //   oldPrice: item.cardOldPrice ?? 0,
-  //   shopBg: '',
-  // }))
-
 //<---------------------------------------------------------------------------------------------------------------->  
 // MockApi data fetching and using for cards.
 
@@ -56,7 +38,7 @@ interface Product {
   badge,
   inventory,
   priceWithoutDiscount,
-  category,
+  "category": category._ref,
   'image': image.asset->url,
   tags,
   price,
@@ -109,50 +91,35 @@ interface Product {
           
           <div>
             <div>
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Office Chairs</label></div>
+            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="26fd7176-3c4d-40fc-a73a-3b85a9b5e15f" className='text-[12px] md:text-[17px] font-semibold'>Wing Chair</label></div>
 
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Dining Chairs</label></div>
+            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="407a8583-6203-4f61-becf-8e8b4c5461b6" className='text-[12px] md:text-[17px] font-semibold'>Wooden Chair</label></div>
             </div>
 
 
             <div>
-            <div className="flex items-center justify-start gap-[5px] md:gap-[6px]"><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Outdoor Chairs</label></div>
+            <div className="flex items-center justify-start gap-[5px] md:gap-[6px]"><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="b5710116-09af-4d0e-aa9a-dcd02fe919a9" className='text-[12px] md:text-[17px] font-semibold'>Desk Chair</label></div>
 
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Kids Chairs</label></div>
             </div>
           </div>
 
 
-           <div>
-           <div>
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Gaming Chairs</label></div>
-
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Accent Chairs</label></div>
-            </div>
-
-            <div>
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Specialty Chairs</label></div>
-
-            <div className='flex items-center justify-start gap-[5px] md:gap-[6px]'><input type="checkbox" id="chair" className='w-[11px] md:w-[14px] h-[13px] md:h-[15px]'/> <label htmlFor="chair" className='text-[12px] md:text-[17px] font-semibold'>Living Room Chairs</label></div>
-            </div>
-           </div>
 
            </div>
          
           </div>
 
-           <div className='w-full md:w-auto flex justify-start md:justify-center'>
           {/* Filter */}
           <div className='flex flex-col justify-center'>
           <h1 className='text-[17px] md:text-[20px] font-semibold mb-[10px] md:mb-[15px]'>Filter By Price</h1>
-            <div className='flex items-center w-[150px] md:w-[240px] border-black border-[1px] rounded-full p-[1px]'><input type='radio' className='w-[20px] h-[14px] md:h-[20px]'/></div>
+            <div className='flex items-center w-[230px] md:w-[240px] border-black border-[1px] rounded-full p-[1px]'><input type='radio' className='w-[20px] h-[14px] md:h-[20px]'/></div>
 
             <div className='flex items-center md:justify-center gap-[50px] md:gap-[100px] text-[12px] md:text-[17px] font-semibold'>
               <h2>From <span>$0</span></h2>
               <h2>To <span>$9000</span></h2>
             </div>
           </div>
-          </div>
+         
 
 
           {/* Sort */}
@@ -173,7 +140,7 @@ interface Product {
 
 
         {/* Cards main */}
-        <div className='w-full grid grid-cols-2 md:grid-cols-4 h-[640px] md:h-auto overflow-y-auto  gap-x-[8px] md-gap-x-[10px] gap-y-[25px] md:gap-y-[70px] grid-rows-3 mt-[10px] md:mt-[40px] '>
+        <div className='w-full grid grid-cols-2 md:grid-cols-4 h-[640px] md:h-auto overflow-y-auto md:overflow-visible  gap-x-[8px] md-gap-x-[10px] gap-y-[25px] md:gap-y-[70px] grid-rows-3 mt-[10px] md:mt-[40px] '>
           <ProductCard data={Product_data} />
         </div>
 

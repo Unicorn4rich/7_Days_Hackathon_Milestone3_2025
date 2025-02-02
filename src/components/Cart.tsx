@@ -7,6 +7,7 @@ import { IoTrashOutline } from "react-icons/io5";
 import { Button } from '@/components/ui/button';
 import { useRouter, useSearchParams } from 'next/navigation';
 import  Link  from 'next/link';
+import { Sending_UserData_ToSanity } from '@/services/userApi';
 
 
 interface Dyn_Data {
@@ -19,6 +20,10 @@ interface Dyn_Data {
 
 
 function Cart_Route() {
+
+        useEffect(()=>{
+      Sending_UserData_ToSanity()
+    },[])
 
     const router = useRouter(); // url mein jo query paramater ki values bhejte hain unhy ye hook get karwany ke bad hata deta hai taky hmara url ajeeb sa na dikhy.
 
@@ -162,7 +167,7 @@ function handleQuantity(index: number, e_target_value: number){  // index => obj
 
             {/* button */}
 
-             <Link href={"!"} >
+             <Link href={"/checkout"} >
             <Button className='w-full md:w-[334px] h-[50px] md:h-[60px] text-[15px] leading-[24px] font-medium text-white mt-[25px] md:mt-[32px] py-[18px] px-[100px] rounded-[30px] bg-[#029FAE]'>Member Checkout</Button>
             </Link>
         </div>

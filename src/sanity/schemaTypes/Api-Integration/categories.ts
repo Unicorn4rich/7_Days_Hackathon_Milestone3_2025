@@ -1,7 +1,7 @@
 import { defineType } from "sanity";
 
 export const categorySchema = defineType({
-    name: 'categories',
+    name: 'categories', 
     title: 'Categories',
     type: 'document',
     fields: [
